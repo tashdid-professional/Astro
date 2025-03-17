@@ -8,6 +8,7 @@ type InputGroupProps = {
 
 type InputTextProps = InputHTMLAttributes<HTMLInputElement>;
 
+// ✅ Input Group Component
 const InputGroup = ({ className, children }: InputGroupProps) => {
   return (
     <div
@@ -21,10 +22,9 @@ const InputGroup = ({ className, children }: InputGroupProps) => {
   );
 };
 
+// ✅ Input Component (Fix: Added `displayName`)
 const Input = React.forwardRef<HTMLInputElement, InputTextProps>(
-  (props: InputTextProps, ref: any) => {
-    const { className, ...rest } = props;
-
+  ({ className, ...rest }, ref) => {
     return (
       <input
         className={cn(
@@ -41,6 +41,9 @@ const Input = React.forwardRef<HTMLInputElement, InputTextProps>(
   }
 );
 
+Input.displayName = "Input"; // 🔥 Fix for ESLint warning
+
+// ✅ Input Group Text Component (Fix: Added `displayName`)
 const InputGroupText = ({ className, children }: InputGroupProps) => {
   return (
     <div className={cn("input-group-text mr-3", className ?? "")}>
@@ -49,7 +52,11 @@ const InputGroupText = ({ className, children }: InputGroupProps) => {
   );
 };
 
+InputGroupText.displayName = "InputGroupText"; // 🔥 Good practice for debugging
+
+// ✅ Attach components to InputGroup
 InputGroup.Text = InputGroupText;
 InputGroup.Input = Input;
 
+// ✅ Export InputGroup as the main component
 export default InputGroup;
