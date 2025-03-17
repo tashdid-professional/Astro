@@ -31,11 +31,11 @@ const AboutUs = () => {
             repair services, Astro is your one-stop shop for a variety of IT
             products. We offer a broad selection of essential tech accessories,
             including batteries, chargers, and other IT equipment, all from
-            trusted brands to ensure quality and reliability. Whether you're
+            trusted brands to ensure quality and reliability. Whether you&apos;re
             looking to replace a faulty charger, upgrade your battery, or find
             the latest IT gadgets, we have you covered. At Astro, we understand
             how crucial your devices are to your everyday life and business
-            operations. That’s why we prioritize customer satisfaction, ensuring
+            operations. That&apos;s why we prioritize customer satisfaction, ensuring
             fast, reliable, and affordable services and products that keep you
             connected and productive. Our goal is to provide seamless technology
             solutions that cater to both individual and business needs, making

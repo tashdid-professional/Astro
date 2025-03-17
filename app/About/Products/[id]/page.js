@@ -1,4 +1,5 @@
 import products from "../../data.json";
+import Link from "next/link";
 
 export default function ProductDetail({ params }) {
   const { id } = params;
@@ -15,7 +16,7 @@ export default function ProductDetail({ params }) {
       <img src={product.image} alt={product.title} className="w-full h-64 object-cover rounded-lg mb-4" />
       <p className="text-lg">{product.description}</p>
       <p className="text-xl font-semibold mt-2">Price: ${product.price}</p>
-      <a href="/About/Products" className="text-blue-500 hover:underline mt-4 block">Back to products</a>
+      <Link src="/About/Products" className="text-blue-500 hover:underline mt-4 block">Back to products</Link>
     </div>
   );
 }
