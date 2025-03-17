@@ -4,7 +4,7 @@ import { useState } from "react"; // ✅ Correct import for Next.js`
 import JobApplicationFormEn from '../../components/jobApplicationFormEn'
 import JobApplicationFormBn from '../../components/jobApplicationFormBn'
 
-const page = () => {
+const Page = () => {
   const [selectedComponent, setSelectedComponent] = useState<"A" | "B">("A");
   return (
     <div className='container mx-auto'>
@@ -31,4 +31,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
