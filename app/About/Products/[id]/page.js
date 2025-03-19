@@ -1,13 +1,12 @@
-import fs from "fs";
-import path from "path";
+import Link from "next/link";
 
 export default async function ProductDetail({ params }) {
-  const filePath = path.join(process.cwd(), "app", "products", "data.json");
-  const fileData = fs.readFileSync(filePath, "utf8");
-  const products = JSON.parse(fileData);
+  // Fetch data from the public folder
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/data.json`);
+  const products = await res.json();
 
-  const { id } = params;
-  const product = products.find((p) => p.id.toString() === id);
+  // Find the product by ID
+  const product = products.find((p) => p.id.toString() === params.id);
 
   if (!product) {
     return <h1 className="text-2xl text-red-500">Product not found</h1>;
@@ -19,6 +18,10 @@ export default async function ProductDetail({ params }) {
       <img src={product.image} alt={product.title} className="w-full h-64 object-cover rounded-lg mb-4" />
       <p className="text-lg">{product.description}</p>
       <p className="text-xl font-semibold mt-2">Price: ${product.price}</p>
+
+      <Link href="/About/Products" className="text-blue-500 hover:underline mt-4 block">
+        Back to products
+      </Link>
     </div>
   );
 }

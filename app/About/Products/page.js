@@ -1,12 +1,13 @@
-import path from 'path';
-import fs from 'fs';
 import ProductFilter from '../../../components/ProductFilter';
 
 async function fetchProducts() {
-  const filePath = path.join(process.cwd(), 'app/products/data.json');
-  const jsonData = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(jsonData);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/data.json`);
+  if (!res.ok) {
+    throw new Error("Failed to load products");
+  }
+  return res.json();
 }
+
 
 export default async function ProductsPage() {
   const products = await fetchProducts(); // Fetch products from JSON file
