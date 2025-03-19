@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         {/* Navs */}
-        <div className='flex space-x-3 px-16 flex-wrap'>
+        <div className='flex space-x-3 px-16 flex-wrap justify-center'>
           <Link className='' href='/'>Home</Link>
           <Link className='' href='/About'>About</Link>
           <Link className='' href='/Stores'>Stores</Link>

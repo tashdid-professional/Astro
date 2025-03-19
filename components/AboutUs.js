@@ -1,6 +1,7 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 import { integralCF } from "../styles/fonts";
+import Image from "next/image";
 
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -8,12 +9,12 @@ const AboutUs = () => {
   return (
     <div>
       {/* container */}
-      <div className="flex container items-center mx-auto my-12 lg:px-[5%] ">
-        <div className="lg:w-1/2">
-          <img
-            src="/images/astro-fran.jpeg"
-            className=" rounded-4xl w-[80%] "
-          ></img>
+      <div className="lg:flex container items-center mx-auto my-12 lg:px-[5%] space-x-4 px-4">
+        <div className="lg:w-1/2 mx-auto">
+          <Image
+            src="/images/about.png" width={600} height={600}
+            className=" rounded-4xl px-5 " alt="about-us"
+          ></Image>
         </div>
         <div className=" text-lg py-7 lg:flex flex-col gap-y-10 lg:w-1/2 text-black">
           <h1 className={`${integralCF.className} text-6xl inline-block bg-gradient-to-r from-[#390067] to-black to-50% text-transparent bg-clip-text`}>About Us</h1>

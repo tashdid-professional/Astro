@@ -43,7 +43,7 @@ export default function Form() {
   return (
     <div>
       <div className="text-black m-16">
-        <h1 className="text-4xl font-extrabold">
+        <h1 className="text-5xl font-extrabold">
           একজন ইঞ্জিনিয়ার হিসেবে আমাদের দলে যোগ দিন!
         </h1>
         <br />

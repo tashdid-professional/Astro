@@ -5,7 +5,8 @@
     "description": "High-quality wireless headphones with noise cancellation.",
     "price": 99.99,
     "image": "/images/battery.jpg",
-    "category": "Electronics"
+    "category": "Electronics",
+    "featured": true
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "Feature-packed smartwatch with fitness tracking and notifications.",
     "price": 199.99,
     "image": "/images/charger.jpeg",
-    "category": "Wearables"
+    "category": "Wearables",
+    "featured": false
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "description": "Powerful gaming laptop with high refresh rate display and RTX GPU.",
     "price": 1299.99,
     "image": "/images/cctv.jpg",
-    "category": "Gaming"
+    "category": "Gaming",
+    "featured": false
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "description": "Portable Bluetooth speaker with deep bass and long battery life.",
     "price": 49.99,
     "image": "/images/cctv-2.jpg",
-    "category": "Electronics"
+    "category": "Electronics",
+    "featured": true
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "description": "Latest 5G smartphone with a stunning display and pro camera system.",
     "price": 899.99,
     "image": "/images/smartphone.jpg",
-    "category": "Electronics"
+    "category": "Electronics",
+    "featured": true
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "description": "Ergonomic wireless keyboard with backlit keys and silent typing.",
     "price": 39.99,
     "image": "/images/keyboard.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+    "featured": false
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "description": "Ultra HD 4K monitor with vibrant colors and fast response time.",
     "price": 349.99,
     "image": "/images/monitor.jpg",
-    "category": "Electronics"
+    "category": "Electronics",
+    "featured": true
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "description": "High-performance mechanical keyboard with customizable RGB lighting.",
     "price": 129.99,
     "image": "/images/mechanical-keyboard.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+    "featured": false
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "description": "Precision gaming mouse with customizable DPI and RGB lighting.",
     "price": 59.99,
     "image": "/images/gaming-mouse.jpg",
-    "category": "Gaming"
+    "category": "Gaming",
+    "featured": false
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "description": "Next-gen VR headset with immersive 3D experience.",
     "price": 399.99,
     "image": "/images/vr-headset.jpg",
-    "category": "Gaming"
+    "category": "Gaming",
+    "featured": false
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "description": "Compact wireless earbuds with active noise cancellation.",
     "price": 129.99,
     "image": "/images/earbuds.jpg",
-    "category": "Wearables"
+    "category": "Wearables",
+    "featured": false
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "description": "Ergonomic gaming chair with lumbar support and adjustable armrests.",
     "price": 199.99,
     "image": "/images/gaming-chair.jpg",
-    "category": "Gaming"
+    "category": "Gaming",
+    "featured": false
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "description": "Wearable fitness tracker with heart rate monitoring and step counting.",
     "price": 79.99,
     "image": "/images/fitness-tracker.jpg",
-    "category": "Wearables"
+    "category": "Wearables",
+    "featured": false
   },
   {
     "id": 14,
@@ -109,7 +122,8 @@
     "description": "Fast wireless charging pad for multiple devices.",
     "price": 49.99,
     "image": "/images/charging-pad.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+    "featured": false
   },
   {
     "id": 15,
@@ -117,7 +131,8 @@
     "description": "High-speed external SSD with 1TB storage.",
     "price": 149.99,
     "image": "/images/external-ssd.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+    "featured": false
   },
   {
     "id": 16,
@@ -125,6 +140,7 @@
     "description": "Full HD streaming webcam with built-in microphone and auto-focus.",
     "price": 79.99,
     "image": "/images/webcam.jpg",
-    "category": "Accessories"
+    "category": "Accessories",
+    "featured": false
   }
 ]

@@ -1,5 +1,5 @@
 // app/page.js (or app/page.tsx)
-import Navbar from '../components/Navbar';
+
 import Testimonial from '../components/Testimonial';
 import Carousel from "../components/Carousel";
 import AboutUs from "../components/AboutUs";
@@ -56,7 +56,7 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar />
+      
       <Carousel />
       <AboutUs />
       <FeaturedProducts />

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { sendEmail } from "../app/actions/sendEmail";
+import { integralCF } from "../styles/fonts";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -43,7 +44,7 @@ export default function Form() {
   return (
     <div>
       <div className="text-black m-16">
-        <h1 className="text-4xl font-extrabold">Join Our Team as an Engineer ! </h1>
+        <h1 className={`font-bold text-5xl ${integralCF.className}  my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-80% text-transparent bg-clip-text`}>Join Our Team as an Engineer ! </h1>
         <br></br>
         Are you a skilled and passionate engineer looking for an exciting
         opportunity?<br></br> At Astro, we are searching for dedicated

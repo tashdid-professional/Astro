@@ -13,9 +13,14 @@ export default async function FeauturedProducts() {
   const products = await fetchProducts(); // Fetch products from JSON file
   return (
     <div className="px-[7%] mt-20">
-      <h1 className={`font-bold text-5xl ${integralCF.className}  my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-70% text-transparent bg-clip-text`}>Feautured Products</h1>
+      <h1
+        className={`font-bold text-5xl ${integralCF.className}  my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-70% text-transparent bg-clip-text`}
+      >
+        Feautured Products
+      </h1>
       <div className="grid lg:grid-cols-4  gap-6">
-        {products.slice(0,4).map((product) => (
+        {products.filter(product => (product.featured == true))
+        .map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
