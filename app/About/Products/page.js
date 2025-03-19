@@ -1,20 +1,16 @@
 import ProductFilter from '../../../components/ProductFilter';
-
-async function fetchProducts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/data.json`);
-  if (!res.ok) {
-    throw new Error("Failed to load products");
-  }
-  return res.json();
-}
-
+import path from 'path';
+import fs from 'fs';
 
 export default async function ProductsPage() {
-  const products = await fetchProducts(); // Fetch products from JSON file
+  // Fetch products from the public folder during server-side rendering
+  const filePath = path.join(process.cwd(), 'public/data.json');
+  const jsonData = fs.readFileSync(filePath, 'utf8');
+  const products = JSON.parse(jsonData);
 
   return (
     <div className="container mx-auto bg-white">
-      {/* Pass the products to the client-side component */}
+      {/* Pass the products to the ProductFilter component */}
       <ProductFilter products={products} />
     </div>
   );

@@ -1,32 +1,14 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { integralCF } from "../styles/fonts";
 import ProductCard from "./ProductCard";
+import { integralCF } from "../styles/fonts";
+import path from 'path';
+import fs from 'fs';
 
-// Fetch products from the public folder
-function FeaturedProducts() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchProducts() {
-      const response = await fetch("/data.json"); // Fetch the JSON from the public folder
-      if (!response.ok) {
-        console.error("Failed to fetch products.");
-        return [];
-      }
-      const data = await response.json();
-      setProducts(data);
-      setLoading(false);
-    }
-
-    fetchProducts();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+// Server component fetching data directly in the component
+export default async function FeaturedProducts() {
+  // Fetch products from the public folder or a remote URL
+  const filePath = path.join(process.cwd(), "public/data.json");
+  const jsonData = fs.readFileSync(filePath, "utf8");
+  const products = JSON.parse(jsonData);
 
   return (
     <div className="px-[7%] mt-20">
@@ -45,5 +27,3 @@ function FeaturedProducts() {
     </div>
   );
 }
-
-export default FeaturedProducts;
