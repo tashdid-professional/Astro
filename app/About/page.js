@@ -1,9 +1,10 @@
 import React from 'react'
+import AboutUs from '../../components/AboutUs'
 
 const page = () => {
   return (
     <div>
-      <h1>This is company profile</h1>
+      <AboutUs/>
     </div>
   )
 }

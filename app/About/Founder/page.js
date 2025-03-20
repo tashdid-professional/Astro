@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="lg:flex items-center px-[7%] space-x-6 container">
+    <div className="lg:flex items-center px-[7%] space-x-6 container lg:mb-20">
       <div className="lg:w-[40%]">
         <img
           src="/images/founder.jpg"
@@ -11,9 +11,9 @@ const page = () => {
       </div>
 
       <div className="lg:w-[60%]">
-        <blockquote class=" italic font-semibold ">
+        <blockquote className=" italic font-semibold ">
           <svg
-            class="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4"
+            className="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
