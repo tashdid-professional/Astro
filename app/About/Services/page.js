@@ -10,7 +10,7 @@ const page = () => {
           Astro is your one-stop solution for all IT and electronics servicing
           needs. We specialize in mobile, PC, laptop, and printer repairs,
           ensuring fast and reliable solutions for both hardware and software
-          issues. Whether it's a screen replacement, motherboard repair, or
+          issues. Whether it&apos;s a screen replacement, motherboard repair, or
           software troubleshooting, our expert technicians are equipped to
           handle it all. <br /> <br /> In addition to repairs, we also provide installation
           and maintenance of CCTV systems, ensuring top-notch security for homes
