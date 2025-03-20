@@ -42,7 +42,7 @@ export default function Form() {
 
   return (
     <div>
-      <div className="text-black m-16">
+      <div className="text-black lg:m-16 p-5">
         <h1 className="text-5xl font-extrabold">
           একজন ইঞ্জিনিয়ার হিসেবে আমাদের দলে যোগ দিন!
         </h1>
@@ -70,7 +70,7 @@ export default function Form() {
         </h1>
       </div>
 
-      <div className="max-w-lg mx-16 bg-gray-100 p-6 shadow-2xl rounded-md text-black my-20 border">
+      <div className="max-w-lg lg:mx-16 mx-5 bg-gray-100 p-6 shadow-2xl rounded-md text-black my-20 border">
         <h2 className="text-2xl font-bold mb-4">আপনার বিবরণ জমা দিন</h2>
         {status && <p className="mb-4 text-red-600">{status}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">

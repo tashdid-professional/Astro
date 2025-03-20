@@ -16,9 +16,9 @@ const ProductFilter = ({ products }) => {
     : products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div className='px-20'>
+    <div className='lg:px-20 px-3'>
       {/* Category Filter Buttons */}
-      <div className="flex space-x-4 mb-6">
+      <div className="flex flex-wrap space-x-4 mb-6">
         {categories.map((category) => (
           <button
             key={category}
@@ -35,7 +35,7 @@ const ProductFilter = ({ products }) => {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid lg:grid-cols-4 gap-8">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />

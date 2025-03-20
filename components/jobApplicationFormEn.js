@@ -43,7 +43,7 @@ export default function Form() {
 
   return (
     <div>
-      <div className="text-black m-16">
+      <div className="text-black lg:m-16 p-5">
         <h1 className={`font-bold text-5xl ${integralCF.className}  my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-80% text-transparent bg-clip-text`}>Join Our Team as an Engineer ! </h1>
         <br></br>
         Are you a skilled and passionate engineer looking for an exciting
@@ -72,7 +72,7 @@ export default function Form() {
         </h1>
       </div>
 
-      <div className="max-w-lg mx-16 bg-gray-100 p-6 shadow-2xl rounded-md text-black my-20 border ">
+      <div className="max-w-lg lg:mx-16 mx-5 bg-gray-100 p-6 shadow-2xl rounded-md text-black my-20 border ">
         <h2 className="text-2xl font-bold mb-4">Submit Your Details</h2>
         {status && <p className="mb-4 text-red-600">{status}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
