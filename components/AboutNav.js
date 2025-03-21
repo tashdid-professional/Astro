@@ -19,7 +19,7 @@ export default function Navbar() {
         
 
         {/*Menu */}
-        <div className={`flex flex-wrap lg:space-x-10 space-x-6 text-sm font-extrabold ${poppinsFont.className} lg:justify-end items-center container mx-auto flex space-y-6 lg:space-y-0  pr-[7%] lg:h-20`}>
+        <div className={`flex flex-wrap space-x-8 col lg:flex-row lg:space-x-10 py-3 lg:text-sm text-xs lg:font-extrabold ${poppinsFont.className}  items-center lg:justify-end justify-between container mx-auto flex space-y-6 lg:space-y-0  lg:pr-[7%] lg:h-20`}>
           {[
             { name: "Company Profile", path: "/About" },
             { name: "Our Products", path: "/About/Products" },

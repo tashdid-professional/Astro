@@ -9,7 +9,7 @@ export default async function ProductsPage() {
   const products = JSON.parse(jsonData);
 
   return (
-    <div className="container mx-auto bg-white">
+    <div className="container mx-auto bg-white pt-12">
       {/* Pass the products to the ProductFilter component */}
       <ProductFilter products={products} />
     </div>

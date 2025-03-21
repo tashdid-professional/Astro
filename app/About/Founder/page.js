@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="lg:flex items-center px-[7%] space-x-6 container lg:mb-20">
+    <div className="lg:flex items-center px-[7%] space-x-6 container lg:mb-20 pt-12">
       <div className="lg:w-[40%]">
         <img
           src="/images/founder.jpg"

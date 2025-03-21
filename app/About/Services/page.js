@@ -3,7 +3,7 @@ import Services from '../../../components/Services'
 
 const page = () => {
   return (
-    <div className='w-full lg:pb-26 pb-8'>
+    <div className='w-full lg:pb-26 pb-8 pt-12'>
       <Services/>
       <div>
         <h1 className='lg:text-2xl text-lg px-[7%]'>
