@@ -1,4 +1,5 @@
 // File: app/admin/orders/page.js
+export const runtime = "nodejs";
 
 import prisma from "../../../lib/prisma";
 import Link from 'next/link';
