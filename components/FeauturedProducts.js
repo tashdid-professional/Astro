@@ -10,13 +10,13 @@ export default async function FeaturedProducts() {
   
 
   return (
-    <div className="px-[7%] lg:mt-20">
+    <div className="px-[5%] lg:mt-20">
       <h1
         className={`font-bold text-5xl ${integralCF.className} my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-70% text-transparent bg-clip-text`}
       >
         Featured Products
       </h1>
-      <div className="grid lg:grid-cols-4 gap-6">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-6">
         {products
           .slice(0,4) // Filter only featured products
           .map((product) => (

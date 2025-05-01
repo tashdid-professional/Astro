@@ -21,20 +21,20 @@ const ProductCard = ({ product }) => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-52 object-cover rounded-t-lg hover:scale-105 duration-200"
+              className="w-full lg:h-52 h-32 object-cover rounded-t-lg hover:scale-105 duration-200"
             />
           </div>
 
-          <div className="px-4  my-6">
-            <h2 className="text-xl font-bold">{product.name}</h2>
+          <div className="lg:px-4 px-2  lg:my-6 my-3">
+            <h2 className="lg:text-xl font-bold">{product.name}</h2>
             {/* <p>{product.description}</p> */}
             <div className="flex justify-between space-x-4 my-3">
-            <p className="text-green-600 font-semibold mt-2">
+            <p className="text-green-600 font-semibold mt-2 text-xs lg:text-base">
               Price: ${product.price}
             </p>
             <button
           onClick={handleAddToCart}
-          className=" bg-blue-500 text-white px-3 py-1 rounded "
+          className=" bg-blue-500 text-white px-3 py-1 rounded text-xs lg:text-base"
         >
           Add to Cart
         </button>

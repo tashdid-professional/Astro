@@ -23,7 +23,7 @@ const ProductFilter = ({ products }) => {
       : products.filter((product) => product.category.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
-    <div className="lg:pl-20  px-3 lg:flex space-x-20 ">     {/* Category Filter Buttons */}
+    <div className="lg:pl-20   lg:flex space-x-20 ">     {/* Category Filter Buttons */}
       <div className="flex lg:flex-col flex-wrap gap-3 mb-6  ">
         <h1 className="text-xl mb-10 font-bold hidden lg:block">Product Category</h1>
         {categories.map((category) => (
@@ -42,7 +42,7 @@ const ProductFilter = ({ products }) => {
       </div>
 
       {/* Products Grid */}
-      <div className="grid lg:grid-cols-3 gap-8  ">
+      <div className="grid lg:grid-cols-3 grid-cols-2 lg:gap-8 gap-3  ">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
