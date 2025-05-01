@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
             {/* <p>{product.description}</p> */}
             <div className="flex justify-between space-x-4 my-3">
             <p className="text-green-600 font-semibold mt-2 text-xs lg:text-base">
-              Price: ${product.price}
+              Price: {product.price} tk
             </p>
             <button
           onClick={handleAddToCart}
