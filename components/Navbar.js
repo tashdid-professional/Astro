@@ -150,7 +150,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="md:hidden mt-2 space-y-2 pb-4" >
+          <div className="md:hidden mt-2 space-y-2 pb-4 z-[999] max-h-[100vh] overflow-y-auto" >
             {links.map((link) => (
               <div key={link.path}>
                 <Link
@@ -158,7 +158,7 @@ export default function Navbar() {
                   href={link.path}
                   className={`block px-4 py-2 text-white ${
                     pathname === link.path || pathname.startsWith(link.path)
-                      ? "font-bold"
+                      ? "font-bold text-red-500"
                       : ""
                   }`}
                 >
