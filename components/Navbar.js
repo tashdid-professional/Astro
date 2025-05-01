@@ -150,7 +150,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="md:hidden mt-2 space-y-2 pb-4 z-[999] max-h-[100vh] overflow-y-auto" >
+          <div className="md:hidden mt-2 space-y-2 pb-44 z-[999] max-h-[100vh] overflow-y-auto" >
             {links.map((link) => (
               <div key={link.path}>
                 <Link
