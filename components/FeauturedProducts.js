@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCard";
+import ProductCard from "../components/ProductCard";
 import { integralCF } from "../styles/fonts";
 import path from 'path';
 import fs from 'fs';
@@ -11,7 +11,7 @@ export default async function FeaturedProducts() {
   const products = JSON.parse(jsonData);
 
   return (
-    <div className="px-[7%] mt-20">
+    <div className="px-[7%] lg:mt-20">
       <h1
         className={`font-bold text-5xl ${integralCF.className} my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-70% text-transparent bg-clip-text`}
       >

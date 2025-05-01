@@ -1,27 +1,57 @@
+"use client";
+import { useCart } from "../context/CartContext";
 import Link from "next/link";
+import { useState } from "react";
 
 const ProductCard = ({ product }) => {
-  return (
-    <Link href={`/About/Products/${product.id}`} className="block">
-      <div className="bg-gray-100 rounded-lg shadow-xl hover:shadow-2xl transition-transform transform text-black  cursor-pointer h-96 flex flex-col justify-baseline">
-        <div className="overflow-hidden rounded-t-lg">
-          <img
-            src={product.image}
-            alt={product.title}
-            className="w-full h-52 object-cover rounded-t-lg hover:scale-105 duration-200"
-          />
-        </div>
+  const { addToCart } = useCart();
+  const [showPopup, setShowPopup] = useState(false);
 
-        <div className="px-4 ">
-          <h2 className="text-lg font-bold">{product.title}</h2>
-          <p>{product.description}</p>
-          <p className="text-green-600 font-semibold mt-2">
-            Price: ${product.price}
-          </p>
+  const handleAddToCart = () => {
+    addToCart(product);
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 2000);
+    // console.log("Product added to cart:", product);  // Debugging log
+  };
+  return (
+    <div className="relative">
+      <Link href={`/About/Products/${product.id}`} className="block">
+        <div className="bg-gray-100 rounded-lg shadow-xl hover:shadow-2xl transition-transform transform text-black cursor-pointer flex flex-col">
+          <div className="overflow-hidden rounded-t-lg">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full h-52 object-cover rounded-t-lg hover:scale-105 duration-200"
+            />
+          </div>
+
+          <div className="px-4  my-6">
+            <h2 className="text-xl font-bold">{product.name}</h2>
+            {/* <p>{product.description}</p> */}
+            <div className="flex justify-between space-x-4 my-3">
+            <p className="text-green-600 font-semibold mt-2">
+              Price: ${product.price}
+            </p>
+            <button
+          onClick={handleAddToCart}
+          className=" bg-blue-500 text-white px-3 py-1 rounded "
+        >
+          Add to Cart
+        </button>
         </div>
-      </div>
-    </Link>
+          </div>
+         
+        
+      
+        </div>
+      </Link>
+    
+      {showPopup && (
+        <div className="absolute bottom-20 right-0 bg-black opacity-80 text-white px-3 py-1 rounded shadow-lg">
+          ✅ Item added to cart!
+        </div>
+      )}
+    </div>
   );
 };
-
 export default ProductCard;

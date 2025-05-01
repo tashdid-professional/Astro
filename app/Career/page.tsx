@@ -3,11 +3,13 @@ import React from 'react'
 import { useState } from "react"; // ✅ Correct import for Next.js`
 import JobApplicationFormEn from '../../components/jobApplicationFormEn'
 import JobApplicationFormBn from '../../components/jobApplicationFormBn'
+import Image from 'next/image';
 
 const Page = () => {
   const [selectedComponent, setSelectedComponent] = useState<"A" | "B">("A");
   return (
     <div className='container mx-auto'>
+         
     <div className="flex gap-2 justify-end m-8">
     <button
       onClick={() => setSelectedComponent("A")}

@@ -6,9 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const images = [
-  '/images/caro-1.jpg',
-  '/images/caro-2.jpg',
-  '/images/caro-3.jpg',
+  '/images/banner-1.jpeg',
+  '/images/banner-2.jpeg',
+  '/images/banner-3.jpeg',
+  '/images/banner-4.jpeg',
 ];
 
 const Carousel = () => {
@@ -34,7 +35,7 @@ const Carousel = () => {
       <div className="flex w-full h-full transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${index * 100}%)` }}>
         {images.map((src, i) => (
           <div key={i} className="min-w-full h-full relative">
-            <Image src={src} alt={`Slide ${i}`} layout="fill" objectFit="cover" priority />
+            <Image src={src} alt={`Slide ${i}`} layout="fill" objectFit="fill" priority />
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import { integralCF } from "../styles/fonts";
 
 const Services = () => {
   return (
-    <div className="px-[7%] lg:my-20 mb-8">
+    <div className="px-[7%] lg:my-20 my-8">
       <div className=" text-black lg:flex space-x-5  lg:justify-between items-center ">
         <div
           className={`lg:text-7xl text-bold text-5xl lg:mb-0 mb-6 ${integralCF.className} `}

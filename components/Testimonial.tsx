@@ -58,7 +58,19 @@ const Testimonial = ({ data }: ReviewsProps) => {
           }}
           className="relative w-full mb-6 md:mb-9"
         >
-          <div className="relative flex items-end sm:items-center max-w-frame mx-auto mb-6 md:mb-10 px-4 xl:px-0">
+          <div className="relative items-start sm:items-center max-w-frame mx-auto mb-6 md:mb-10 px-4 xl:px-0">
+          <motion.h2
+              initial={{ y: "100px", opacity: 0 }}
+              whileInView={{ y: "0", opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className={cn([
+                integralCF.className,
+                "  text-5xl capitalize ml-auto my-10 lg:px-[7%] inline-block bg-gradient-to-r from-[#390067] to-black to-80% text-transparent bg-clip-text",
+              ])}
+            >
+              OUR HAPPY CUSTOMERS
+            </motion.h2>
             <div className="flex items-center space-x-1 ml-2 lg:px-[7%]">
               <CarouselPrevious variant="ghost" className="text-2xl">
                 <FaArrowLeft />
@@ -67,18 +79,7 @@ const Testimonial = ({ data }: ReviewsProps) => {
                 <FaArrowRight />
               </CarouselNext>
             </div>
-            <motion.h2
-              initial={{ y: "100px", opacity: 0 }}
-              whileInView={{ y: "0", opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className={cn([
-                integralCF.className,
-                "text-[32px]  md:text-5xl capitalize ml-auto my-10 lg:px-[7%] inline-block bg-gradient-to-r from-[#390067] to-black to-80% text-transparent bg-clip-text",
-              ])}
-            >
-              OUR HAPPY CUSTOMERS
-            </motion.h2>
+        
           </div>
           <CarouselContent>
             {data.map((review, index) => (

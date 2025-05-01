@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import { CartProvider } from "../context/CartContext";
 
 
 
@@ -38,10 +39,11 @@ export default async function RootLayout({ children}) {
       
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${poppinsFont.className} text-black`}
-      >
+      ><CartProvider>
         <Navbar/>
         {children}
         <Footer/>
+        </CartProvider>
       </body>
     </html>
   );

@@ -10,16 +10,16 @@ const AboutUs = () => {
     <div>
       {/* container */}
       <div className="lg:flex container items-center mx-auto my-12 lg:px-[5%] space-x-4 px-4">
-        <div className="lg:w-1/2 mx-auto">
+        <div className="lg:w-1/2 mx-auto lg:block hidden">
           <Image
             src="/images/about.png" width={600} height={600}
             className=" rounded-4xl px-5 " alt="about-us"
           ></Image>
         </div>
-        <div className=" text-lg py-7 lg:flex flex-col gap-y-10 lg:w-1/2 text-black">
-          <h1 className={`${integralCF.className} text-6xl inline-block bg-gradient-to-r from-[#390067] to-black to-50% text-transparent bg-clip-text`}>About Us</h1>
+        <div className=" text-lg lg:py-7 lg:flex flex-col gap-y-10 lg:w-1/2 text-black">
+          <h1 className={`${integralCF.className} lg:text-6xl text-5xl mb-7 inline-block bg-gradient-to-r from-[#390067] to-black to-50% text-transparent bg-clip-text`}>About Us</h1>
 
-          <p className={poppinsFont.className}>
+          <p className={`${poppinsFont.className} text-sm lg:text-base`}>
             {" "}
             Astro is a leading provider of comprehensive technology solutions,
             offering both expert servicing and a wide range of IT products to

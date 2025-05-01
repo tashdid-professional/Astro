@@ -1,41 +1,48 @@
-'use client'; // This directive makes the component a client-side component
+"use client"; // This directive makes the component a client-side component
 
-import { useState } from 'react';
-import ProductCard from './ProductCard';
+import { useState } from "react";
+import ProductCard from "./ProductCard";
 
 const ProductFilter = ({ products }) => {
   // Set up state for the selected category
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Define categories for filtering
-  const categories = ['All', 'Electronics', 'Clothing','Accessories','Wearables'];
+  const categories = [
+    "All",
+    "Electronics",
+    "Clothing",
+    "Accessories",
+    "Wearables",
+  ];
 
   // Filter products based on the selected category
-  const filteredProducts = selectedCategory === 'All'
-    ? products
-    : products.filter((product) => product.category === selectedCategory);
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter((product) => product.category.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
-    <div className='lg:px-20 px-3'>
-      {/* Category Filter Buttons */}
-      <div className="flex flex-wrap space-x-4 mb-6">
+    <div className="lg:pl-20  px-3 lg:flex space-x-20 ">     {/* Category Filter Buttons */}
+      <div className="flex lg:flex-col flex-wrap gap-3 mb-6  ">
+        <h1 className="text-xl mb-10 font-bold hidden lg:block">Product Category</h1>
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)} // Update selected category
-            className={`text-lg font-semibold ${
+            className={`lg:text-lg   ${
               selectedCategory === category
-                ? 'text-blue-500 border-b-2 border-blue-500'
-                : 'text-gray-700'
+                ? "text-red-600 "
+                : "text-gray-700"
             }`}
           >
-            {category}
+            {selectedCategory == category? category+'     >>': category}
           </button>
         ))}
       </div>
 
       {/* Products Grid */}
-      <div className="grid lg:grid-cols-4 gap-8">
+      <div className="grid lg:grid-cols-3 gap-8  ">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
