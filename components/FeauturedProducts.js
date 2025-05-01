@@ -16,7 +16,7 @@ export default async function FeaturedProducts() {
       >
         Featured Products
       </h1>
-      <div className="grid lg:grid-cols-4 grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-6 gap-4">
         {products
           .slice(0,4) // Filter only featured products
           .map((product) => (
