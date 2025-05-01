@@ -31,10 +31,10 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full lg:h-[600px] h-[300px] overflow-hidden">
+    <div className="relative  lg:h-[600px] h-[250px] overflow-hidden  rounded-2xl  lg:m-6 m-4 ">
       <div className="flex w-full h-full transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${index * 100}%)` }}>
         {images.map((src, i) => (
-          <div key={i} className="min-w-full h-full relative">
+          <div key={i} className="min-w-full h-full relative ">
             <Image src={src} alt={`Slide ${i}`} layout="fill" objectFit="fill" priority />
           </div>
         ))}

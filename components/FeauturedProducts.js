@@ -1,14 +1,13 @@
 import ProductCard from "../components/ProductCard";
 import { integralCF } from "../styles/fonts";
-import path from 'path';
-import fs from 'fs';
+import { getProducts } from "../lib/getProduct"
+
 
 // Server component fetching data directly in the component
 export default async function FeaturedProducts() {
   // Fetch products from the public folder or a remote URL
-  const filePath = path.join(process.cwd(), "public/data.json");
-  const jsonData = fs.readFileSync(filePath, "utf8");
-  const products = JSON.parse(jsonData);
+    const products = await getProducts();
+  
 
   return (
     <div className="px-[7%] lg:mt-20">
@@ -19,7 +18,7 @@ export default async function FeaturedProducts() {
       </h1>
       <div className="grid lg:grid-cols-4 gap-6">
         {products
-          .filter((product) => product.featured === true) // Filter only featured products
+          .slice(0,4) // Filter only featured products
           .map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
