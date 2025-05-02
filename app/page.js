@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import AboutUs from "../components/AboutUs";
 import FeaturedProducts from "../components/FeauturedProducts";
 import Services from "../components/Services";
+import HireUs from "../components/HireUs"
 
 // Exporting the page component only
 export default function Home() {
@@ -61,6 +62,7 @@ export default function Home() {
       <AboutUs />
       <FeaturedProducts />
       <Services />
+      <HireUs/>
       <Testimonial data={reviewsData} /> {/* Pass reviewsData as a prop */}
     </div>
   );
