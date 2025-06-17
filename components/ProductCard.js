@@ -31,19 +31,19 @@ const ProductCard = ({ product }) => {
             <h2 className="lg:text-xl font-bold">{product.name}</h2>
             {/* <p>{product.description}</p> */}
             <div className="flex justify-between space-x-4 my-2">
-              <p className="text-green-600 font-semibold lg:mt-2 text-xs lg:text-base">
+              <p className="text-[#360061] font-semibold lg:mt-2 text-xs lg:text-sm">
                 Price: {product.price} tk
               </p>
               <button
                 onClick={handleAddToCart}
-                className=" bg-[#360061] text-white px-3 py-1 rounded text-xs lg:text-base lg:flex hidden  gap-3"
+                className=" bg-[#360061] text-white px-3 py-1 rounded text-xs lg:text-sm lg:flex hidden  gap-3"
               >
                 Add to Cart <ShoppingCart size={20}/>
               </button>
             </div>
             <button
               onClick={handleAddToCart}
-              className=" bg-[#360061] justify-center text-white px-3 py-1 rounded text-xs lg:text-base lg:hidden flex gap-2 w-full"
+              className=" bg-[#360061] justify-center text-white px-3 py-1 rounded text-xs lg:text-sm lg:hidden flex gap-2 w-full"
             >
               Add to Cart <ShoppingCart size={15}/>
             </button>

@@ -10,7 +10,7 @@ export default async function FeaturedProducts() {
   
 
   return (
-    <div className="px-[5%] lg:mt-20">
+    <div className="px-[5%] lg:mt-20 ">
       <h1
         className={`font-bold text-5xl ${integralCF.className} my-12 inline-block bg-gradient-to-r from-[#390067] to-black to-70% text-transparent bg-clip-text`}
       >
