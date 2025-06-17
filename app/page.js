@@ -7,6 +7,7 @@ import FeaturedProducts from "../components/FeauturedProducts";
 import Services from "../components/Services";
 import HireUs from "../components/HireUs"
 
+
 // Exporting the page component only
 export default function Home() {
   // Declare your reviewsData inside the component

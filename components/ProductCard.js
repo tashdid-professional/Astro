@@ -16,14 +16,15 @@ const ProductCard = ({ product }) => {
   };
   return (
     <div className="relative">
-      <Link href={`/About/Products/${product.id}`} className="block">
+     
         <div className="bg-gray-100 rounded-lg shadow-xl hover:shadow-2xl transition-transform transform text-black cursor-pointer flex flex-col">
           <div className="overflow-hidden rounded-t-lg">
+             <Link href={`/About/Products/${product.id}`} className="block">
             <img
               src={product.image}
               alt={product.title}
               className="w-full lg:h-52 h-32 object-cover rounded-t-lg hover:scale-105 duration-200"
-            />
+            /></Link>
           </div>
 
           <div className="lg:px-4 px-2  lg:my-6 my-3">
@@ -48,7 +49,7 @@ const ProductCard = ({ product }) => {
             </button>
           </div>
         </div>
-      </Link>
+      
 
       {showPopup && (
         <div className="absolute bottom-20 right-0 bg-black opacity-80 text-white px-3 py-1 rounded shadow-lg">
