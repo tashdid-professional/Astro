@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { integralCF } from "../styles/fonts";
@@ -64,10 +65,11 @@ const FeaturedProductsClient = ({ products }) => {
             আরও পণ্য দেখতে চান? আমাদের সম্পূর্ণ কালেকশন ব্রাউজ করুন
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/About/Products">
-            <button className="bg-gradient-to-r from-[#390067] to-[#2b0b3a] text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-              সব পণ্য দেখুন
-            </button></a>
+            <Link href="/About/Products" passHref legacyBehavior>
+              <button className="bg-gradient-to-r from-[#390067] to-[#2b0b3a] text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                সব পণ্য দেখুন
+              </button>
+            </Link>
             {/* <button className="border-2 border-[#390067] text-[#390067] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#390067] hover:text-white transform hover:scale-105 transition-all duration-300">
               ক্যাটাগরি দেখুন
             </button> */}
