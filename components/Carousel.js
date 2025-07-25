@@ -36,7 +36,7 @@ const Carousel = () => {
       transition={{ duration: 1, delay: 0.5 }}
       viewport={{ once: true, amount: 0.3 }}
       whileInView={{ opacity: 1 }}
-      className="relative  lg:h-[600px] h-[250px] overflow-hidden  rounded-2xl  lg:m-6 m-4 "
+      className="relative  lg:h-[90vh] h-[200px] overflow-hidden  rounded-2xl  lg:m-6 m-4 "
     >
       <div
         className="flex w-full h-full transition-transform duration-500 ease-in-out"

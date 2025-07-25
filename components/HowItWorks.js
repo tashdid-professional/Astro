@@ -48,9 +48,9 @@ const HowItWorks = () => {
           className="text-center mb-16"
         >
           <h2
-            className={`${integralCF.className} text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-[#390067] to-[#2b0b3a] bg-clip-text text-transparent`}
+            className={`${integralCF.className} font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-[#390067] to-[#2b0b3a] bg-clip-text text-transparent`}
           >
-            কিভাবে কাজ করি
+            HOW WE WORK
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             মাত্র তিনটি সহজ ধাপে পেয়ে যান আপনার প্রযুক্তি সমস্যার সমাধান
@@ -172,9 +172,11 @@ const HowItWorks = () => {
                 <button className="bg-white text-[#390067] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
                   এখনই কল করুন
                 </button>
+                <a href="/Contact">
                 <button className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#390067] transform hover:scale-105 transition-all duration-300">
                   অনলাইনে বুক করুন
                 </button>
+                </a>
               </div>
             </div>
           </div>

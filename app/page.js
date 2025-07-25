@@ -1,5 +1,6 @@
 // app/page.js (or app/page.tsx)
 
+
 import Hero from "../components/Hero";
 import Carousel from "../components/Carousel";
 import AboutUs from "../components/AboutUs";
@@ -8,10 +9,11 @@ import Services from "../components/Services";
 import HowItWorks from "../components/HowItWorks";
 import WhyChooseUs from "../components/WhyChooseUs";
 import FeaturedProducts from "../components/FeauturedProducts";
-import HireUs from "../components/HireUs";
+
 import Testimonial from '../components/Testimonial';
 import FAQ from "../components/FAQ";
 import Newsletter from "../components/Newsletter";
+import HireUs from "../components/Career";
 
 
 // Exporting the page component only
@@ -72,7 +74,7 @@ export default function Home() {
       <HowItWorks />
       <WhyChooseUs />
       <FeaturedProducts />
-      <HireUs/>
+      <HireUs />
       <Testimonial data={reviewsData} /> {/* Pass reviewsData as a prop */}
       <FAQ />
       <Newsletter />

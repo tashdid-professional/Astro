@@ -2,32 +2,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { integralCF } from "../styles/fonts";
-import AnimatedCounter from "./ui/AnimatedCounter";
+import SmoothCounter from "./SmoothCounter";
 
 const Stats = () => {
   const stats = [
     {
-      number: 1000,
-      suffix: "+",
-      title: "Happy customers",
-      description: "Customers who love our service"
+      number: 500,
+      suffix: "＋", // Using full-width plus sign
+      title: "Satisfied Customers",
+      description: "Happy with our service"
     },
     {
       number: 50,
-      suffix: "+",
-      title: "Devices models",
-      description: "Successfully repaired",
+      suffix: "＋", // Using full-width plus sign
+      title: "Device Models",
+      description: "Successfully repaired"
     },
     {
       number: 3,
       suffix: "",
-      title: "Years in business",
-      description: "Technology service experience"
+      title: "Years Experience",
+      description: "In technology service"
     },
     {
       number: 24,
-      suffix: "/7",
-      title: "Hour support",
+      suffix: "／７", // Using full-width characters
+      title: "Hours Support",
       description: "Always by your side"
     }
   ];
@@ -44,7 +44,7 @@ const Stats = () => {
           className="text-center mb-16"
         >
           <h2
-            className={`${integralCF.className} text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-[#390067] to-[#2b0b3a] bg-clip-text text-transparent`}
+            className={`${integralCF.className} font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-[#390067] to-[#2b0b3a] bg-clip-text text-transparent`}
           >
             আমাদের সাফল্য
           </h2>
@@ -68,9 +68,20 @@ const Stats = () => {
               <div className="relative mb-4">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#390067] to-[#2b0b3a] rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300 transform group-hover:scale-110"></div>
                 <div className="relative bg-white rounded-full p-6 lg:p-8 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className={`${integralCF.className} text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#390067] to-[#2b0b3a] bg-clip-text text-transparent`}>
-                    <AnimatedCounter from={0} to={stat.number} />
-                    {stat.suffix}
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#390067] to-[#2b0b3a] bg-clip-text text-transparent flex items-center justify-center"
+                       style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+                    <SmoothCounter 
+                      from={0} 
+                      to={stat.number} 
+                      duration={3}
+                    />
+                    {stat.suffix && (
+                      <span 
+                        className="ml-1" 
+                        style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontWeight: 'bold' }}
+                        dangerouslySetInnerHTML={{ __html: stat.suffix }}
+                      />
+                    )}
                   </div>
                 </div>
               </div>

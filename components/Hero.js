@@ -29,7 +29,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className={`${integralCF.className} text-4xl md:text-5xl lg:text-7xl leading-tight`}
+              className={`${integralCF.className}lg:font-normal font-bold lg:pt-0 pt-6 text-5xl lg:text-7xl leading-tight`}
             >
               আপনার
               <br />
@@ -97,7 +97,7 @@ const Hero = () => {
           >
             <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
               <Image
-                src="/images/astro-repair.jpeg"
+                src="/images/guy.jpg"
                 alt="Astro Technology Services"
                 fill
                 className="object-cover rounded-2xl shadow-2xl"
@@ -108,7 +108,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="absolute -top-4 -left-4 bg-white text-[#390067] px-6 py-3 rounded-full font-bold shadow-lg"
+                className="absolute lg:hidden -top-4 -left-4 bg-white text-[#390067] px-6 py-3 rounded-full font-bold shadow-lg"
               >
                 ✨ বিশ্বস্ত সেবা
               </motion.div>
