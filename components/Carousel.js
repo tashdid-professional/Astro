@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const images = [
-  '/images/banner-1.jpeg',
-  '/images/banner-2.jpeg',
-  '/images/banner-3.jpeg',
-  '/images/banner-4.jpeg',
+  "/images/banner-1.jpeg",
+  "/images/banner-2.jpeg",
+  "/images/banner-3.jpeg",
+  "/images/banner-4.jpeg",
 ];
 
 const Carousel = () => {
@@ -31,11 +31,26 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative  lg:h-[600px] h-[250px] overflow-hidden  rounded-2xl  lg:m-6 m-4 ">
-      <div className="flex w-full h-full transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${index * 100}%)` }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1, delay: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
+      whileInView={{ opacity: 1 }}
+      className="relative  lg:h-[600px] h-[250px] overflow-hidden  rounded-2xl  lg:m-6 m-4 "
+    >
+      <div
+        className="flex w-full h-full transition-transform duration-500 ease-in-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
         {images.map((src, i) => (
           <div key={i} className="min-w-full h-full relative ">
-            <Image src={src} alt={`Slide ${i}`} layout="fill" objectFit="fill" priority />
+            <Image
+              src={src}
+              alt={`Slide ${i}`}
+              layout="fill"
+              objectFit="fill"
+              priority
+            />
           </div>
         ))}
       </div>
@@ -47,14 +62,14 @@ const Carousel = () => {
       >
         <ArrowLeft className="text-white" />
       </button>
-      
+
       <button
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full"
         onClick={nextSlide}
       >
         <ArrowRight className="text-white" />
       </button>
-    </div>
+    </motion.div>
   );
 };
 
