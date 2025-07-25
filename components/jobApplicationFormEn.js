@@ -51,10 +51,10 @@ export default function JobApplicationFormEn() {
         <div className="relative mb-12 md:mb-14 lg:mb-16 rounded-xl md:rounded-2xl overflow-hidden shadow-xl">
           <Image 
             src={"/images/hiring.jpg"} 
-            alt='astro-career' 
+            alt="astro-career" 
             width={1300} 
             height={600} 
-            className='w-full h-60 md:h-80 lg:h-96 object-cover'
+            className="w-full h-60 md:h-80 lg:h-96 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
         </div>
@@ -68,13 +68,13 @@ export default function JobApplicationFormEn() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 mb-12 md:mb-14 lg:mb-16">
-          {/* What We're Looking For */}
+          {/* What We are Looking For */}
           <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-7 lg:p-8 shadow-lg border-l-4 border-[#390067]">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-7 lg:mb-8 text-[#2b0b3a] flex items-center">
               <span className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-[#390067] to-[#2b0b3a] rounded-full flex items-center justify-center text-white text-lg md:text-xl mr-3 md:mr-4">
                 🔍
               </span>
-              What We're Looking For
+              What We&apos;re Looking For
             </h2>
             <div className="space-y-3 md:space-y-4">
               <div className="flex items-start space-x-3">
