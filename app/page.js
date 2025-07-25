@@ -67,8 +67,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <Carousel />
       <AboutUs />
+      <Carousel />
       <Stats />
       <Services />
       <HowItWorks />
